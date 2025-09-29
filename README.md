@@ -8,7 +8,7 @@
   1. 找到你的 ComfyUI/custom_nodes 目录。
   2. 在该目录执行：
      ```
-     git clone https://github.com/<yourname>/comfyui-nix-plugin.git
+     git clone https://github.com/J-ChenX/ComfyUI-NIX.git
      ```
   3. 重启 ComfyUI。
 
@@ -119,4 +119,5 @@
 ## 致谢
 
 - ComfyUI 与其文档/社区。
+
 
