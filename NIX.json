@@ -1,0 +1,186 @@
+{
+    "NIX_ImageComposite":{
+        "title": "仅蒙版合成",
+        "inputs": {
+            "sampled_image": "采样后图像",
+            "pipe": "原始数据",
+            "original_image": "合成底图"
+        },
+        "outputs": {
+            "IMAGE": "输出"
+        }
+    },
+    "NIX_MaskCrop":{
+        "title": "仅蒙版裁剪",
+        "inputs": {
+            "original_image": "原图",
+            "mask": "蒙版"
+        },
+        "widgets": {
+            "width": "宽",
+            "height": "高",
+            "expand": "扩展",
+            "blur": "模糊",
+            "filling_method": "填充方式",
+            "binarize": "二值化"
+        },
+        "outputs": {
+            "crop_image": "裁剪图像",
+            "crop_mask": "裁剪蒙版",
+            "pipe": "原始数据"
+        }
+    },
+    "NIX_MaskNull": {
+        "title": "判断遮罩为空",
+        "inputs": {
+            "mask": "遮罩"
+        },
+        "outputs": {
+            "boolean": "布尔值"
+        }
+    },
+    "NIX_PathLoading":{
+        "title": "路径加载",
+        "widgets": {
+            "image_path": "原图路径",
+            "mask_path": "蒙版路径",
+            "channel": "通道",
+            "load_quantity": "加载数量",
+            "start_index": "开始序号"
+        },
+        "outputs": {
+            "image": "图像",
+            "mask": "蒙版",
+            "filename": "文件名",
+            "quantity_number": "数量编号"
+        }
+    },
+    "NIX_SaveImage":{
+        "title": "保存图像",
+        "inputs": {
+            "images": "图像"
+        },
+        "widgets": {
+            "filename_prefix": "文件名前缀",
+            "output_path": "输出路径",
+            "image_format": "图像格式"
+        }
+    },
+    "NIX_RotateImage":{
+        "title": "旋转图像",
+        "inputs": {
+            "images": "图像",
+            "masks": "蒙版"
+        },
+        "widgets": {
+            "angle": "旋转度数",
+            "flip_horizontal": "水平翻转"
+        },
+        "outputs": {
+            "images": "图像",
+            "masks": "蒙版"
+        }
+    },
+    "NIX_RotateCrop": {
+        "title": "旋转后裁剪",
+        "inputs": {
+            "rotate_image": "旋转后图像",
+            "original_image": "原图"
+        },
+        "outputs": {
+            "IMAGE": "输出"
+        }
+    },
+    "NIX_ImageUpscaleProportionally": {
+        "title": "等比例缩放",
+        "inputs": {
+            "image": "图像"
+        },
+        "widgets":{
+            "side_length": "边长",
+            "side": "边",
+            "eight_multiples": "八倍数"
+        },
+        "outputs": {
+            "IMAGE": "图像"
+        }
+    },
+    "NIX_StringMatcher": {
+        "title": "模式选择",
+        "widgets": {
+            "inputcount": "输入数量",
+            "judge_string": "选择字符串",
+            "string_1": "字符串_1",
+            "string_2": "字符串_2"
+        },
+        "outputs": {
+            "index": "序号"
+        }
+    },
+    "NIX_SwitchAnything": {
+        "title": "选择任意",
+        "widgets": {
+            "index": "序号"
+        },
+        "outputs": {
+            "value": "值"
+        }
+    },
+    "NIX_ImageTile": {
+       "title": "图像切块",
+        "inputs": {
+            "image": "图像"
+        },
+        "widgets": {
+            "rows": "行",
+            "cols": "列",
+            "overlap_x": "横向重叠尺寸",
+            "overlap_y": "纵向重叠尺寸"
+        },
+        "outputs": {
+            "IMAGE": "图像",
+            "tile_width": "宽",
+            "tile_height": "高",
+            "overlap_x": "横向重叠尺寸",
+            "overlap_y": "纵向重叠尺寸"
+        }
+    },
+    "NIX_ImageInference": {
+        "title": "图像打标",
+        "inputs": {
+            "image": "图像"
+        },
+        "widgets": {
+            "model_name": "模型名称",
+            "base_url": "url地址",
+            "api_key": "api密钥",
+            "user_prompt": "输入提示词"
+        },
+        "outputs": {
+            "prompt_word": "输出文本"
+        }
+    },
+    "ImitationHueNode": {
+        "title": "仿制色调",
+        "inputs": {
+            "imitation_image": "参考图像",
+            "target_image": "目标图像",
+            "mask": "蒙版"
+        },
+        "widgets": {
+            "strength": "强度",
+            "skin_protection": "皮肤保护",
+            "auto_brightness": "自动亮度",
+            "brightness_range": "亮度范围",
+            "auto_contrast": "自动对比度",
+            "contrast_range": "对比度范围",
+            "auto_saturation": "自动饱和度",
+            "saturation_range": "饱和度范围",
+            "auto_tone": "自动色调",
+            "tone_strength": "色调范围"
+        },
+        "outputs": {
+            "IMAGE": "图像"
+        }
+    }
+}
